@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>LoveMatch</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="text-info">Love Match With JavaScript</h1>
+        </div>
+        <div class="row justify-content-center">
+            <form id="match">
+                <p id="msg">Check your match with your lover.</p>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                    <span id="nameErr"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Lover Name</label>
+                    <input type="text" id="lover" class="form-control" required>
+                    <span id="loverErr"></span>
+                </div>
+                <div class="form-group">
+                    <button id="btn" class="btn btn-danger btn-block">Check Love Status</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let match;
+
+    march = document.querySelector('#btn').addEventListener('click', (e) => {
+        
+        e.preventDefault()
+        
+        var x,y;
+        x = document.getElementById("name").value;
+        y = document.getElementById("lover").value;
+    if (x == "" || y == "") {
+            alert("Enter your name");
+            return false;
+        }
+    else{
+        document.querySelector('#msg').innerHTML = "Your Match result is ready"
+        document.querySelector('#name').value
+        document.querySelector('#lover').value
+
+        let value = Math.floor(Math.random() * 100) + "%"
+        if(value > 70){
+            var msg = document.getElementById('msg').innerHTML = "Your match is perfect score is "+value
+            alert("Your match is perfect score is "+value)
+        }
+        else{
+            
+            var msg = document.getElementById('msg').innerHTML = "Try finding true love "+value
+            alert("Try finding true love "+value)
+        }
+    }
+
+        })
+    
+       
+    </script>
+</body>
+</html>
